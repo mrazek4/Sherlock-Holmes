@@ -1,3 +1,5 @@
+package Prikaz;
+
 import java.util.ArrayList;
 
 public class Room {
@@ -37,7 +39,7 @@ private ArrayList<Integer>availableRooms;
 
     @Override
     public String toString() {
-        return "Room " +
+        return "Prikaz.Room " +
                 "id " + id +
                 " locationName" + locationName +
                 " availableRooms=" + availableRooms ;

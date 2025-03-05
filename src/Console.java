@@ -1,3 +1,5 @@
+import Prikaz.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -32,5 +34,12 @@ public class Console {
         WorldMap worldMap = new WorldMap();
         worldMap.loadMap();
         prikazy.put("jdi", new Movement(worldMap, scanner));
+        prikazy.put("konec", new Exit());
+        prikazy.put("pomoc", new Help());
+        prikazy.put("prohledat",new Search());
+        prikazy.put("vzit", new Take());
+        prikazy.put("mluv", new Talk());
+        prikazy.put("pouzit", new Use());
+
     }
 }

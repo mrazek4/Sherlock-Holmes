@@ -1,4 +1,6 @@
+package Prikaz;
 import java.util.Scanner;
+
 
 public class Movement extends Command {
 
@@ -23,7 +25,7 @@ public class Movement extends Command {
 
     private void move() {
         Room currentRoom = worldMap.getWorld().get(worldMap.getCurrentPosition());
-        System.out.println("V momentální chvíli se nacházíš v:" + currentRoom.getLocationName() + "Můžeš jít do:");
+        System.out.println("V momentální chvíli se nacházíš v: " + currentRoom.getLocationName() + "Můžeš jít do:");
         for (int roomID : currentRoom.getAvailableRooms()) {
             Room availableRoom = worldMap.getWorld().get(roomID);
             System.out.println(roomID + " - " + availableRoom.getLocationName());
