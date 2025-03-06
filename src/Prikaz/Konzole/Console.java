@@ -1,3 +1,5 @@
+package Prikaz.Konzole;
+
 import Prikaz.*;
 
 import java.util.ArrayList;
