@@ -10,4 +10,8 @@ public class Search extends Command {
     public boolean exit() {
         return false;
     }
+
+    public String searchRoom() {
+        return "";
+    }
 }

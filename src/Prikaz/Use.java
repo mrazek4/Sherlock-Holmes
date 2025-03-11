@@ -10,4 +10,8 @@ public class Use extends Command {
     public boolean exit() {
         return false;
     }
+
+    public String useItem() {
+        return "";
+    }
 }

@@ -10,4 +10,8 @@ public class Take extends Command {
     public boolean exit() {
         return false;
     }
+
+    public String takeIteam() {
+        return "";
+    }
 }

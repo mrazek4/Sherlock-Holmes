@@ -10,4 +10,8 @@ public class Talk extends Command {
     public boolean exit() {
         return false;
     }
+
+    public String talkToChar() {
+        return "";
+    }
 }
