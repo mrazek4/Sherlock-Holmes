@@ -11,7 +11,7 @@ public class Take extends Command {
         return false;
     }
 
-    public String takeIteam() {
+    public String takeIteam(Inventory inventory) {
         return "";
     }
 }

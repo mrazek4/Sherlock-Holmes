@@ -1,6 +1,7 @@
 package Prikaz;
 
 public class Search extends Command {
+    Movement movement;
     @Override
     public String execute() {
         return "";
@@ -12,6 +13,7 @@ public class Search extends Command {
     }
 
     public String searchRoom() {
+
         return "";
     }
 }
