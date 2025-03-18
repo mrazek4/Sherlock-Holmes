@@ -1,4 +1,6 @@
 package Prikaz;
+
+import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -17,10 +19,23 @@ public class Movement extends Command {
 
     private WorldMap worldMap;
     private Scanner sc;
+    private HashMap<Integer, String> postavyVMistnostech;
 
     public Movement(WorldMap worldMap, Scanner sc) {
         this.worldMap = worldMap;
         this.sc = sc;
+        inicializujPostavy();
+
+    }
+
+    private void inicializujPostavy() {
+        postavyVMistnostech = new HashMap<>();
+        postavyVMistnostech.put(1, "Watson");
+        postavyVMistnostech.put(5, "Tom");
+        postavyVMistnostech.put(6, "Služebnictvo");
+        postavyVMistnostech.put(2, "Zahradník");
+        postavyVMistnostech.put(7, "Lady Margaret");
+        postavyVMistnostech.put(3, "Tělo oběti, Komorník James");
     }
 
     private void move() {
@@ -43,5 +58,8 @@ public class Movement extends Command {
         }
         worldMap.setCurrentPosition(targetRoomID);
         System.out.println("Přesunul ses do:" + worldMap.getWorld().get(targetRoomID).getLocationName());
+        String postavy = postavyVMistnostech.getOrDefault(targetRoomID, "nikdo tu neni");
+        System.out.println("v mistnosti se nachazi: " +postavy);
     }
+
 }

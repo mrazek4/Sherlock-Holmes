@@ -1,9 +1,19 @@
 package Prikaz;
 
 public class Take extends Command {
+    private Search search;
+    private Inventory inventory;
+
+
+    public Take(Search search, Inventory inventory) {
+        this.search = search;
+        this.inventory = inventory;
+
+    }
+
     @Override
     public String execute() {
-        return "";
+        return takeItem();
     }
 
     @Override
@@ -11,7 +21,17 @@ public class Take extends Command {
         return false;
     }
 
-    public String takeIteam(Inventory inventory) {
-        return "";
+    public String takeItem() {
+        Room currentRoom = search.getWorldMap().getWorld().get(search.getWorldMap().getCurrentPosition());
+        int roomId = currentRoom.getId();
+
+        String item = search.getRoomItem(roomId);
+
+        if (item != null) {
+            inventory.addItem(item);
+            search.removeRoomItem(roomId);
+            return "Sebral jsi předmět: " + item;
+        }
+        return "V této místnosti není žádný předmět k sebrání.";
     }
 }

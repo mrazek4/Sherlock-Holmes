@@ -34,14 +34,17 @@ public class Console {
 
     private void inicializace() {
         WorldMap worldMap = new WorldMap();
+        Inventory inventory = new Inventory();
+        Search search = new Search(worldMap);
+
         worldMap.loadMap();
         prikazy.put("jdi", new Movement(worldMap, scanner));
         prikazy.put("konec", new Exit());
         prikazy.put("pomoc", new Help());
-        prikazy.put("prohledat",new Search());
-        prikazy.put("vzit", new Take());
-        prikazy.put("mluv", new Talk());
-        prikazy.put("pouzit", new Use());
+        prikazy.put("prohledat",new Search(worldMap));
+        prikazy.put("vzit", new Take(search,inventory));
+        prikazy.put("mluv", new Talk(worldMap));
+        prikazy.put("pouzit", new Use(search, inventory, worldMap));
 
     }
 }

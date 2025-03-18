@@ -15,23 +15,17 @@ public class Inventory {
     }
 
     public String removeItem(String item) {
+        if (items.contains(item)) {
         items.remove(item);
         return "item byl odebran";
     }
+    return "tento item nemas";}
 
     public boolean hasItem(String item) {
-        return false;
+        return items.contains(item);
     }
 
-    public String showInventory() {
-        return items.toString();
 
-    }
 
-    @Override
-    public String toString() {
-        return "Inventory" +
-                "items=" + items +
-                '}';
-    }
+
 }
