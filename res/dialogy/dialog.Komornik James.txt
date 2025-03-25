@@ -1,0 +1,6 @@
+Holmes: Zdravim, ja jsem Sherlock Holmes a jsem hlavni vysetrovatell pripadu, jake je Vase jmeno
+Komornik James: Dobry den pane Holmesi ja jsem James a slouzim jako komornik
+Holmes: Videl jste v posledni dobe neco podezreleho?
+Komornik James: Jediny prislo zvlastni bylo, ze v posledni dobe se Sir Charles a Lady Margaret hadali vic nez normalne, ale nevim kvuli cemu
+Holmes: Dobre dekuji Vam
+Komornik James: Rado se stalo, porad tomu nemuzu uverit slouzim zde uz pres 30 let a neveril bych, ze by se neco takoveho mohlo stat

@@ -32,7 +32,7 @@ public class Movement extends Command {
         postavyVMistnostech = new HashMap<>();
         postavyVMistnostech.put(1, "Watson");
         postavyVMistnostech.put(5, "Tom");
-        postavyVMistnostech.put(6, "Služebnictvo");
+        postavyVMistnostech.put(6, "Kuchar");
         postavyVMistnostech.put(2, "Zahradník");
         postavyVMistnostech.put(7, "Lady Margaret");
         postavyVMistnostech.put(3, "Tělo oběti, Komorník James");

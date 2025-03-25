@@ -1,0 +1,5 @@
+Holmes: Dobry den, ja jsem Sherlock Holmes, vysetrovatel tohoto pripadu a vy musite byt Lady Margaret
+Lady Margaret: Ano, jsem manzelka Charlese
+Holmes: Vsimla jste si v posledni dobe neceho podezreleho?
+Lady Margaret: Ne, ani ve snu by me nenapadlo, ze by se neco takoveho mohlo stat
+Holmes: Dobre, dekuji

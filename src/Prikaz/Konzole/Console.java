@@ -45,6 +45,7 @@ public class Console {
         prikazy.put("vzit", new Take(search,inventory));
         prikazy.put("mluv", new Talk(worldMap));
         prikazy.put("pouzit", new Use(search, inventory, worldMap));
+        prikazy.put("vyresit", new SolveMystery());
 
     }
 }

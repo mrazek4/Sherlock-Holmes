@@ -24,11 +24,10 @@ public class Search extends Command {
     }
 
     private void initializeItems() {
-        roomItems.put(5, "Klíč");
-        roomItems.put(7, "Šperk");
-        roomItems.put(3, "Dýka");
-        roomItems.put(4, "Dopis");
-        roomItems.put(1, "Noviny");
+        roomItems.put(4, "Klíč");
+        roomItems.put(3, "Šperk");
+        roomItems.put(7, "Dýka");
+
     }
 
     public String searchRoom() {

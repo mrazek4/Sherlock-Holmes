@@ -1,0 +1,11 @@
+Holmes: Zdravim, me jmeno je Holmes a vysetruju tuto zahadu
+Tom: Dobry den, pane Holmesi ja jsem Tom a Sir Charles byl muj bratr
+Holmes: Mate nejake tuseni kdo by mohl zabit vaseho bratra?
+Tom: Rad bych Vam pomohl, ale bohuzel nevim
+Holmes: A jaky jste mel vztah s Vasim bratrem
+Tom: Myslim si, ze dobry, ale buhuzel jsme se v posledni dobe pohadali a o to vic me mrzi, ze uz se nemuzem usmirit
+Holmes: V cem spocivala Vase hadka
+Tom: Bohuzel jsem se dostal do financni krize a potreboval jsem pujcit, ale bratr se cukal
+Holmes: A jak to dopadlo
+Tom: Nakonec souhlasil, ale pod podminkou, ze se mu omluvim a vratim mu to, ani jedno jsem bohuzel nestihl
+Holmes: Dobre dekuji

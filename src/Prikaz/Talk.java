@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Talk extends Command {
     private WorldMap worldMap;
-    private Map<Integer, String> characters; // Mapa pro přiřazení postav k místnostem
+    private Map<Integer, String> characters;
 
     public Talk(WorldMap worldMap) {
         this.worldMap = worldMap;
@@ -44,12 +44,12 @@ public class Talk extends Command {
     }
 
     private String loadDialogue(String character) {
-        String filePath = "dialogy/" + character + ".txt";
+        String filePath = "res/dialogy/dialog." + character + ".txt";
 
         try {
             return new String(Files.readAllBytes(Paths.get(filePath))); //delano pres chatGPT
         } catch (IOException e) {
-            return "Nenalezen soubor pro dialog " + character + ".";
+            return "Nenalezen soubor pro dialog " + character ;
         }
     }
 }

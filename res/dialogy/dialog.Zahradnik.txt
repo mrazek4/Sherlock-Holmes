@@ -1,0 +1,10 @@
+Holmes: Dobry den, ja jsem Holmes
+Zahradnik: D-d-d-dobrý den, p-pane Holmesi. Co-copak potřebujete?
+Holmes: Potrebuju se Vas zeptat na otazku
+Zahradnik: A-a-ale ať je to prosím rych-chly, potřebuju t-tady něco d-d-dodělat.
+Holmes: Zaregistroval jste v posledni dobe neco podezreleho?
+Zahradnik: A-a-ano, nejak s-spatne mi rostou kvetiny.
+Holmes: A ohledne podezreloho chovani v dome?
+Zahradnik: N-ne, j-ja s nikym moc n-ne-nemluvim
+Holmes: dobre diky
+Zahradnik: R-r-rado se s-s-stalo

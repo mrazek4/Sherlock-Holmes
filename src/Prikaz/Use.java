@@ -1,5 +1,7 @@
 package Prikaz;
 
+
+
 public class Use extends Command {
     private Search search;
     private Inventory inventory;
@@ -30,8 +32,8 @@ public class Use extends Command {
             if (!cabinetUnlocked) {
                 cabinetUnlocked = true;
                 inventory.removeItem("Klíč");
-                inventory.addItem("Tajný dokument");
-                return "Použil jsi klíč k odemknutí skříňky v pracovně! Uvnitř jsi našel Tajný dokument.";
+
+                return "Použil jsi klíč k odemknutí skříňky v pracovně! Uvnitř jsi našel Tajný dokument, ve kterem se pise o tom, ze Sir Charles se chtel rozvest a prepsal pulku majetku na svoji milenku ";
             } else {
                 return "Skříňka už je odemčená.";
             }
@@ -41,4 +43,5 @@ public class Use extends Command {
             return "Tady teď nemůžeš nic použít.";
         }
     }
-}
+
+    }
