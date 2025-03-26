@@ -21,7 +21,7 @@ public class Console {
             System.out.println(prikazy.get(prikaz).execute());
             exit = prikazy.get(prikaz).exit();
         } else {
-            System.out.println("Neplatný příkaz.");
+            System.out.println("Neplatný příkaz, zkus to znovu.");
         }
     }
 

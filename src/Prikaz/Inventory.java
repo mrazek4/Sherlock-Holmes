@@ -6,7 +6,7 @@ public class Inventory {
     private ArrayList<String> items = new ArrayList<>();
 
     public String addItem(String item) {
-        if (items.size() <= 3) {
+        if (items.size() <= 2) {
             items.add(item);
             return "item byl pridan";
 
@@ -19,7 +19,8 @@ public class Inventory {
         items.remove(item);
         return "item byl odebran";
     }
-    return "tento item nemas";}
+    return "tento item nemas";
+    }
 
     public boolean hasItem(String item) {
         return items.contains(item);
