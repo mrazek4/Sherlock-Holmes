@@ -2,7 +2,9 @@ package Prikaz;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * Class search represents a command for searching in rooms for items.
+ */
 public class Search extends Command {
     private WorldMap worldMap;
     private Map<Integer, String> roomItems;
@@ -22,14 +24,20 @@ public class Search extends Command {
     public boolean exit() {
         return false;
     }
-
+    /**
+     * Initializes the items found in specific rooms.
+     */
     private void initializeItems() {
         roomItems.put(4, "Klíč");
         roomItems.put(3, "Šperk");
         roomItems.put(7, "Dýka");
 
     }
-
+    /**
+     * Searches the current room for items.
+     *
+     * @return A message indicating if an item is found.
+     */
     public String searchRoom() {
         Room currentRoom = worldMap.getWorld().get(worldMap.getCurrentPosition());
         String item = roomItems.get(currentRoom.getId());

@@ -1,7 +1,9 @@
 package Prikaz;
 
 
-
+/**
+ * Class Use represents a command for using items which zou picked up.
+ */
 public class Use extends Command {
     private Search search;
     private Inventory inventory;
@@ -23,7 +25,13 @@ public class Use extends Command {
     public boolean exit() {
         return false;
     }
-
+    /**
+     * Handles the logic for using an item in the current room.
+     * Specifically, this method checks if the player has the "Klíč" in their inventory and whether they are in room 3
+     * to unlock a cabinet and retrieve a secret document.
+     *
+     * @return A message indicating the result of the "use" action.
+     */
     public String useItem() {
         Room currentRoom = worldMap.getWorld().get(worldMap.getCurrentPosition());
         int roomId = currentRoom.getId();

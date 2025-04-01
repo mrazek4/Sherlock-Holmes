@@ -3,7 +3,9 @@ package Prikaz;
 import java.util.HashMap;
 import java.util.Scanner;
 
-
+/**
+ * The Movement class represents a command to move between rooms.
+ */
 public class Movement extends Command {
 
     @Override
@@ -27,7 +29,9 @@ public class Movement extends Command {
         inicializujPostavy();
 
     }
-
+    /**
+     * Initializes characters present in different rooms.
+     */
     private void inicializujPostavy() {
         postavyVMistnostech = new HashMap<>();
         postavyVMistnostech.put(1, "Watson");
@@ -37,7 +41,9 @@ public class Movement extends Command {
         postavyVMistnostech.put(7, "Lady Margaret");
         postavyVMistnostech.put(3, "Tělo oběti, Komorník James");
     }
-
+    /**
+     * Moves the player to a different room.
+     */
     private void move() {
         Room currentRoom = worldMap.getWorld().get(worldMap.getCurrentPosition());
         System.out.println("V momentální chvíli se nacházíš v: " + currentRoom.getLocationName() + " Můžeš jít do:");

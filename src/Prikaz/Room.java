@@ -1,7 +1,9 @@
 package Prikaz;
 
 import java.util.ArrayList;
-
+/**
+ * Represents a rooms in the game world.
+ */
 public class Room {
 private int id;
 private String locationName;

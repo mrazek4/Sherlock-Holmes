@@ -1,5 +1,7 @@
 package Prikaz;
-
+/**
+ * The Help class provides a list of available commands in the game.
+ */
 public class Help extends Command {
     @Override
     public String execute() {

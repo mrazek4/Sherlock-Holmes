@@ -3,14 +3,21 @@ package Prikaz;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-
 import java.util.HashMap;
-
+/**
+ * The WorldMap class represents the game's map structure.
+ * It is responsible for loading the map from a file, managing rooms, and tracking the player's position.
+ */
 public class WorldMap {
     private HashMap<Integer, Room> world = new HashMap<>();
     private int start = 1;
     private int currentPosition = start;
-
+    /**
+     * Loads the map from the "src/mapa.txt" file.
+     * Each line in the file represents a room, containing its ID, name, and accessible neighboring rooms.
+     *
+     * @return true if the map was loaded successfully,  false otherwise.
+     */
     public boolean loadMap() {
 
 

@@ -5,13 +5,18 @@ import Prikaz.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-
+/**
+ * The Console class represents the game console where commands are processed.
+ * It initializes the game, manages user input, and executes commands.
+ */
 public class Console {
     private Scanner scanner = new Scanner(System.in);
     private boolean exit = false;
     private HashMap<String, Command> prikazy = new HashMap<>();
     private ArrayList<String> commands = new ArrayList<>();
-
+    /**
+     * Executes the user command entered to the console.
+     */
     private void provedPrikaz() {
         System.out.print(">> ");
         String prikaz = scanner.nextLine();
@@ -24,14 +29,18 @@ public class Console {
             System.out.println("Neplatný příkaz, zkus to znovu.");
         }
     }
-
+    /**
+     * Starts the console and continuously processes user commands until exit.
+     */
     public void start() {
         inicializace();
         do {
             provedPrikaz();
         } while (!exit);
     }
-
+    /**
+     * Initializes game components and registers available commands.
+     */
     private void inicializace() {
         WorldMap worldMap = new WorldMap();
         Inventory inventory = new Inventory();
