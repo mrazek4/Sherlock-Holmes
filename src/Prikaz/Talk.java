@@ -1,5 +1,7 @@
 package Prikaz;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -12,20 +14,28 @@ public class Talk extends Command {
     private WorldMap worldMap;
     private Map<Integer, String> characters;
 
+public Talk(WorldMap worldMap){
+    this.worldMap = worldMap;
+    initializeCharacters();
+}
     /**
      * Initializes NPCs in rooms.
      */
-
-    public Talk(WorldMap worldMap) {
-        this.worldMap = worldMap;
-        this.characters = new HashMap<>();
-        characters.put(1, "Watson");
-        characters.put(2, "Zahradnik");
-        characters.put(3, "Komornik James");
-        characters.put(5, "Tom");
-        characters.put(6, "Sluzebnictvo");
-        characters.put(7, "Lady Margaret");
+    private void initializeCharacters() {
+        characters = new HashMap<>();
+        try (BufferedReader br = new BufferedReader(new FileReader("src/char"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split("-");
+                int roomId = Integer.parseInt(parts[0]);
+                String character = parts[1];
+                characters.put(roomId, character);
+            }
+        } catch (IOException e) {
+            System.out.println("Chyba při načítání postav: " + e.getMessage());
+        }
     }
+
 
     @Override
     public String execute() {

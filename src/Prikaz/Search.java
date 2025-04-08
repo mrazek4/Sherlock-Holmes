@@ -1,5 +1,8 @@
 package Prikaz;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 /**
@@ -28,11 +31,20 @@ public class Search extends Command {
      * Initializes the items found in specific rooms.
      */
     private void initializeItems() {
-        roomItems.put(4, "Klíč");
-        roomItems.put(3, "Šperk");
-        roomItems.put(7, "Dýka");
 
-    }
+            roomItems = new HashMap<>();
+            try (BufferedReader br = new BufferedReader(new FileReader("src/itemy"))) {
+                String line;
+                while ((line = br.readLine()) != null) {
+                    String[] parts = line.split("-");
+                    int roomId = Integer.parseInt(parts[0]);
+                    String item = parts[1];
+                    roomItems.put(roomId, item);
+                }
+            } catch (IOException e) {
+                System.out.println("Chyba při načítání předmětů: " + e.getMessage());
+            }
+        }
     /**
      * Searches the current room for items.
      *

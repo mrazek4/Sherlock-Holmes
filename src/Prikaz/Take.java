@@ -37,7 +37,7 @@ public class Take extends Command {
 
         String item = search.getRoomItem(roomId);
 
-        if (item != null) {
+        if (item != null) { //jestli byl nalezen item
             inventory.addItem(item);
             search.removeRoomItem(roomId);
             return "Sebral jsi předmět: " + item;

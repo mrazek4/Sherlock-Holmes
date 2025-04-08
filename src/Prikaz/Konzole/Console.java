@@ -26,8 +26,8 @@ public class Console {
         System.out.print(">> ");
         String prikaz = scanner.nextLine();
         commands.add(prikaz);
-        try (FileWriter fw = new FileWriter("src/HistoriePrikazu", true)){
-                fw.write(prikaz + "\n");
+        try (FileWriter fw = new FileWriter("src/HistoriePrikazu", true)){//prida na konec
+                fw.write(prikaz + "\n");//prida novy  radek
 
 
         } catch (IOException e) {
@@ -39,12 +39,14 @@ public class Console {
         } else {
             System.out.println("Neplatný příkaz, zkus to znovu.");
         }
+
     }
 
     /**
      * Starts the console and continuously processes user commands until exit.
      */
     public void start() {
+        System.out.println("Vitejte ve hre Sherlock Holmes, kde resite vrazdu na Panskem sidle, preji hodne stesti!");
         inicializace();
         do {
             provedPrikaz();
@@ -68,7 +70,7 @@ public class Console {
         prikazy.put("mluv", new Talk(worldMap));
         prikazy.put("pouzit", new Use(search, inventory, worldMap));
         prikazy.put("vyresit", new SolveMystery());
-        prikazy.put("history", new History());
+        prikazy.put("historie", new History());
 
     }
 }

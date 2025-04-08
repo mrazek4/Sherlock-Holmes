@@ -5,8 +5,14 @@ import Prikaz.Konzole.Console;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-
+/**
+ * Class History represents a command for showing history of written commands
+ */
 public class History extends Command {
+    /**
+     * saving all commands to file
+     * @return if something is wrong message will tell you
+     */
     @Override
     public String execute() {
         ArrayList<String> list = new ArrayList<>();
@@ -15,7 +21,7 @@ public class History extends Command {
             while ((line = br.readLine()) != null) {
                 list.add(line);
             }
-            return list.toString();
+            return list.toString();//prevedeni na text retezec
         } catch (Exception e) {
             return "Historie prikazu neni k dispozici";
         }
@@ -25,6 +31,8 @@ public class History extends Command {
 
     @Override
     public boolean exit() {
+
         return false;
     }
+
 }
